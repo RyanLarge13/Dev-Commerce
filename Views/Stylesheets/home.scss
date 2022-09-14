@@ -39,10 +39,7 @@ $trans-slo: 2s ease-in-out;
 
 html {
 	scroll-behavior: smooth;
-}
-
-body {
-	
+	overflow-x: hidden;
 }
 
 .drop-shadow {
@@ -55,6 +52,7 @@ body {
 	background-color: rgba(0, 0, 0, .7);
 	opacity: 0;
 	transition: $trans-med;
+	z-index: 998;
 }
 
 aside {
@@ -67,6 +65,10 @@ aside {
 	i {
 		margin: 1em 0;
 		transition: $trans-med-slo;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -80,6 +82,10 @@ aside {
 	z-index: 999;
 	transition: $trans-fast;
 	
+	&:hover {
+		cursor: pointer;
+	}
+
 	span {
 		content: '';
 		position: absolute;
@@ -116,6 +122,11 @@ img {
  top: 5%;
  width: 100vw;
  z-index: -1;
+
+ @media (min-width: 1301px) and (max-width: 2000px) {
+	top: -40%;
+	scale: .5;
+ }
 }
 
 .drop-shadow.open {
@@ -176,16 +187,42 @@ nav {
 			font-weight: 700;
 			transform: translateX(-100%);
 			transition: $trans-med;
+
+			&:hover {
+				cursor: pointer;
+				background-color: #555;
+				color: #fff;
+				transition: $trans-fast;
+			}
 		}
 		
 		li.open {
 			transform: translateX(0);
 		}
 	}
+
+	@media (min-width: 900px) and (max-width: 1300px) {
+		
+	}
+	@media (min-width: 1301px) and (max-width: 2000px) {
+		width: 40vw;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
 }
 
 header {
   padding: 37.5vh 10% 0 13%;
+
+  @media (min-width: 1301px) and (max-width: 2000px) {
+	padding-top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 5em;
+  }
   
   h1 {
   	margin-bottom:.25em;
@@ -202,6 +239,12 @@ header {
 			height: 100%;
 			border-radius: .5em;
 			box-shadow: 0 0 .5em 0 #000;
+			transition: $trans-fast;
+
+			&:hover {
+				scale: 1.05;
+				cursor: pointer;
+			}
 			
 			.bg {
 				width: 100%;
@@ -221,9 +264,18 @@ header {
 			
 			.text {
 				height: 25%;
-				font-size:.6em;
+				font-size: .6em;
 				text-align: center;
 				font-weight: 600;
+
+				@media (min-width: 900px) and (max-width: 1300px) {
+					font-size: 1em;
+				}
+
+				@media (min-width: 1301px) and (max-width: 2000px) {
+					font-size: 1em;
+				}
+				
 			}
 		}
 	}

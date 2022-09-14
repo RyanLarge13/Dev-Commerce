@@ -2,6 +2,7 @@ const timeLine = document.querySelector('.time-line-container');
 const timeLineItem = document.querySelectorAll('.dot');
 const dotHolder = document.querySelector('.dots-holder');
 const vh = window.innerHeight;
+const body = document.querySelector('body');
 let dotTop = 10;
 let infoTop = 20;
 let dateTop = 10;
@@ -53,7 +54,6 @@ const callForDatesandInfo = setInterval(() => {
 
 const fade = () => {
 	const allDots = document.querySelectorAll('.dot');
-	const allInfo = document.querySelectorAll('.info');
 	fadeDates();
 	fadeInfo();
 	allDots.forEach((dot) => {
@@ -91,10 +91,8 @@ const enableScroll = () => {
 };
 
 const checkForEnd = () => {
-	console.log('checking for the end')
 	const allDots = document.querySelectorAll('.dot');
 	const bottom = allDots[allDots.length - 1].getBoundingClientRect().bottom;
-	const body = document.querySelector('body');
 	if (bottom < 700) {
 		body.style.display = 'block';
 	}

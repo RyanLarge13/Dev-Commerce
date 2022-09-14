@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .drop-shadow {
@@ -41,6 +42,7 @@ html {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: 500ms ease-in-out;
+  z-index: 998;
 }
 
 aside {
@@ -54,6 +56,9 @@ aside i {
   margin: 1em 0;
   transition: 750ms ease-in-out;
 }
+aside i:hover {
+  cursor: pointer;
+}
 
 .nav-toggle {
   position: fixed;
@@ -64,6 +69,9 @@ aside i {
   height: 25px;
   z-index: 999;
   transition: 250ms ease-in-out;
+}
+.nav-toggle:hover {
+  cursor: pointer;
 }
 .nav-toggle span {
   content: "";
@@ -99,6 +107,12 @@ img {
   top: 5%;
   width: 100vw;
   z-index: -1;
+}
+@media (min-width: 1301px) and (max-width: 2000px) {
+  img {
+    top: -40%;
+    scale: 0.5;
+  }
 }
 
 .drop-shadow.open {
@@ -157,12 +171,35 @@ nav ul li {
   transform: translateX(-100%);
   transition: 500ms ease-in-out;
 }
+nav ul li:hover {
+  cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  transition: 250ms ease-in-out;
+}
 nav ul li.open {
   transform: translateX(0);
+}
+@media (min-width: 1301px) and (max-width: 2000px) {
+  nav {
+    width: 40vw;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 header {
   padding: 37.5vh 10% 0 13%;
+}
+@media (min-width: 1301px) and (max-width: 2000px) {
+  header {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5em;
+  }
 }
 header h1 {
   margin-bottom: 0.25em;
@@ -178,6 +215,11 @@ header .card-container .head-card {
   height: 100%;
   border-radius: 0.5em;
   box-shadow: 0 0 0.5em 0 #000;
+  transition: 250ms ease-in-out;
+}
+header .card-container .head-card:hover {
+  scale: 1.05;
+  cursor: pointer;
 }
 header .card-container .head-card .bg {
   width: 100%;
@@ -198,12 +240,23 @@ header .card-container .head-card .text {
   text-align: center;
   font-weight: 600;
 }
+@media (min-width: 900px) and (max-width: 1300px) {
+  header .card-container .head-card .text {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1301px) and (max-width: 2000px) {
+  header .card-container .head-card .text {
+    font-size: 1em;
+  }
+}
 
 .sec-1 {
   position: relative;
 }
 .sec-1 h2 {
   top: 2em;
+  position: -webkit-sticky;
   position: sticky;
 }
 .sec-1 .fa-timeline {
@@ -294,6 +347,4 @@ header .card-container .head-card .text {
 .sec-2 #googleMap {
   height: 100%;
   width: 100%;
-}
-
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */
