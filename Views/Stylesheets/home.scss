@@ -1,0 +1,341 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+//variables
+$trans-fast: 250ms ease-in-out;
+$trans-med: 500ms ease-in-out;
+$trans-med-slo: 750ms ease-in-out;
+$trans-slo: 2s ease-in-out;
+
+//repeating styles
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.width {
+	width: 100vw;
+	height: 100vh;
+}
+
+.sec {
+	padding-left: 13%;
+	padding-right: 10%;
+}
+
+//styling home page elements
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	
+}
+
+.drop-shadow {
+	position: fixed;
+	inset: 0;
+	height: 100vh;
+	width: 100vw;
+	pointer-events: none;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, .7);
+	opacity: 0;
+	transition: $trans-med;
+}
+
+aside {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 3em;
+	height: 100vh;
+	
+	i {
+		margin: 1em 0;
+		transition: $trans-med-slo;
+	}
+}
+
+.nav-toggle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 1em 0 0 1em;
+	width: 25px;
+	height: 25px;
+	z-index: 999;
+	transition: $trans-fast;
+	
+	span {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		background-color: #000;
+		border-radius: 1em;
+		transition: $trans-med;
+		
+		&:nth-child(1) {
+			margin-top: .3em;
+			transition: $trans-fast;
+			transition-delay: 500ms;
+		}
+		&:nth-child(3) {
+			margin-top: .6em;
+		} 
+		&:nth-child(2).open {
+			transform: rotate(45deg) translateY(.45em);
+		}
+		&:nth-child(1).open {
+			transform: scale(0, 1);
+			transform-origin: right;
+			transition-delay: 0ms;
+		}
+		&:nth-child(3).open {
+			transform: rotate(-45deg) translateY(-.45em);
+		}
+	}
+}
+
+img {
+ position: absolute;
+ top: 5%;
+ width: 100vw;
+ z-index: -1;
+}
+
+.drop-shadow.open {
+	opacity: 1;
+}
+
+nav.open {
+	transform: translateX(0);
+}
+
+nav {
+	padding: 4em .75em 5em .5em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 70vw;
+	height: 100vh;
+	overflow-x: auto;
+	background-image: url('https://t3.ftcdn.net/jpg/01/63/16/64/360_F_163166422_qiYgU4ZyQHY98UQhePztb8Kkgp4A9v9p.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	transform: translateX(-105%);
+	transition: $trans-med;
+	z-index: 998;
+	
+	.logo {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 1em;
+		font-weight: 600;
+		transform: translateY(-300%);
+		transition: $trans-med;
+	}
+	
+	.logo.open {
+		transform: translateY(0);
+	}
+
+	h2 {
+		font-size: 1.25em;
+		margin-top: 1.25em;
+	}
+	
+	ul {
+		font-size: .75em;
+		
+		li {
+			list-style-type: none;
+			width: 80%;
+			padding: .75em .5em;
+			margin: 1em 0 1em 1em;
+			box-shadow: 0 0 .25em 0 #000;
+			border-radius:.5em;
+			background-color: #eee;
+			font-weight: 700;
+			transform: translateX(-100%);
+			transition: $trans-med;
+		}
+		
+		li.open {
+			transform: translateX(0);
+		}
+	}
+}
+
+header {
+  padding: 37.5vh 10% 0 13%;
+  
+  h1 {
+  	margin-bottom:.25em;
+  }
+  
+	.card-container {
+		margin-top: 4em;
+		width: 100%;
+		height: 30%;
+		gap: 2em;
+		
+		.head-card {
+			width: 100%;
+			height: 100%;
+			border-radius: .5em;
+			box-shadow: 0 0 .5em 0 #000;
+			
+			.bg {
+				width: 100%;
+				height: 100%;
+				border-radius: .5em;
+				background-position: center;
+				background-size: cover;
+			}
+			
+			.bg-1 {
+			  background-image: url('https://cloudfour.com/wp-content/uploads/2020/05/dev-tools-for-designers-poster.jpg');	
+			}
+			
+			.bg-2 {
+				background-image: url('https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg');
+			}
+			
+			.text {
+				height: 25%;
+				font-size:.6em;
+				text-align: center;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.sec-1 {
+	position: relative;
+	
+	h2 {
+		top: 2em;
+		position: sticky;
+	}
+	
+	.fa-timeline {
+		float: right;
+	}
+}
+
+.time-line-container {
+	width: 100%;
+	height: 90%;
+	overflow-y: auto;
+	position: relative;
+	
+	.line {
+		position: absolute;
+		height: 100%; 
+		width: 5px;
+		left: 50%;
+		border-radius: 1em;
+		background-image: radial-gradient(#fff, #aaa);
+		transform: translateX(-50%);
+	}
+	
+	.dots-holder::-webkit-scrollbar {
+		display: none;
+	}
+	
+	.dots-holder {
+		background-color: transparent;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow-y: hidden;
+		
+		.dot {
+			position: absolute;
+			left: 50%;
+			top: 10%;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-image: radial-gradient(#aaa, #fff);
+			transform: translateX(-50%);
+			transition: $trans-med;
+			
+			.inner-dot {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+		}
+		
+		.date {
+			position: absolute;
+			left: 1%;
+			top: 10%;
+			width: 42.5%;
+			height: 40px;
+			border-radius: .5em 2em 2em .5em;
+			transform: translateY(-25%);
+			transition: $trans-med;
+			box-shadow: 0 0 .25em 0 #000;
+			
+			.date-inner {
+				font-size: .75em;
+				width: 95%;
+				height: 85%;
+				border-radius: .3em 2em 2em .3em;
+				background-color: #fff;
+				color: #000;
+			}
+		}
+		
+		.info {
+			position: absolute;
+			right: 1%;
+			top: 20%;
+			width: 42.5%;
+			height: 40px;
+			border-radius: 2em .5em .5em 2em;
+			transform: translateY(-25%);
+			transition: $trans-med;
+			box-shadow: 0 0 .25em 0 #000;
+			
+			.info-inner {
+		  	font-size: .75em;
+				width: 95%;
+				height: 85%;
+				border-radius: 2em .3em .3em 2em;
+				background-color: #fff;
+				color: #000;
+			}
+		}
+	}
+}
+
+.sec-2 {
+	
+	#googleMap {
+		height: 100%;
+		width: 100%;
+	}
+}
