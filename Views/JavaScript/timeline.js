@@ -86,24 +86,21 @@ const enableScroll = () => {
 	const top = (100 / dotHolder.getBoundingClientRect().top) * 100;
 	if (top > 228) {
 		dotHolder.style.overflowY = 'auto';
-		disableScroll();
+		disableScroll('start');
 	}
 };
 
 const checkForEnd = () => {
 	const allDots = document.querySelectorAll('.dot');
-	const bottom = allDots[allDots.length - 1].getBoundingClientRect().bottom;
-	if (bottom < 700) {
-		body.style.display = 'block';
-	}
+	const bottom = allDots[allDots.length - 1];
+	const fromBottom = (bottom.getBoundingClientRect().bottom / vh) * 100;
+	if (fromBottom > 520) disableScroll('kill');
 };
 
-const disableScroll = () => {
-	const body = document.querySelector('body');
-	const html = document.querySelector('html');
-  const sectionOne = document.querySelector('.sec-1');
-	body.style.display = 'none';
-	html.appendChild(sectionOne);
+
+const disableScroll = (param) => {
+	if (param === 'kill') return window.scrollTo(0, vh * 2);
+	window.scrollTo(0, vh * 1);
 };
 
 dotHolder.addEventListener('scroll', fade);
