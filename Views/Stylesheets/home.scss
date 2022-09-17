@@ -125,6 +125,7 @@ img {
 
  @media (min-width: 1301px) and (max-width: 2000px) {
 	top: -40%;
+	right: -20%;
 	scale: .5;
  }
 }
@@ -185,14 +186,20 @@ nav {
 			border-radius:.5em;
 			background-color: #eee;
 			font-weight: 700;
-			transform: translateX(-100%);
+			transform: translateX(-150%);
 			transition: $trans-med;
+			display: flex;
 
 			&:hover {
 				cursor: pointer;
 				background-color: #555;
 				color: #fff;
 				transition: $trans-fast;
+			}
+
+			i {
+				font-size: 1.25em;
+				margin-left: 5%;
 			}
 		}
 		
@@ -222,6 +229,10 @@ header {
 	flex-direction: column;
 	justify-content: flex-end;
 	padding-bottom: 5em;
+
+	p {
+		width: 50%;
+	}
   }
   
   h1 {
@@ -238,12 +249,14 @@ header {
 			width: 100%;
 			height: 100%;
 			border-radius: .5em;
-			box-shadow: 0 0 .5em 0 #000;
+			box-shadow: .1em .1em .5em 0 #000;
+			transform: translateY(200%);
 			transition: $trans-fast;
 
 			&:hover {
 				scale: 1.05;
 				cursor: pointer;
+				box-shadow: .25em .25em .5em 0 rgba(0, 0, 0, .7);
 			}
 			
 			.bg {

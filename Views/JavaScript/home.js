@@ -6,20 +6,24 @@ const listItems = document.querySelectorAll('nav li');
 const dropShadow = document.querySelector('.drop-shadow');
 const asideIcons = document.querySelectorAll('aside i');
 
-const toggleNav = async () => {
+const toggleNav = () => {
 	nav.classList.toggle('open');
 	dropShadow.classList.toggle('open');
 	spans.forEach((span) => {
 		span.classList.toggle('open');
 	});
-  for (let k = 0; k < listItems.length; k++) {
-  	setTimeout(() => {
-  		listItems[k].classList.toggle('open');
-  	}, 50 * k)
-  }
 	setTimeout(() => {
-	logo.classList.toggle('open');
+		logo.classList.toggle('open');
 	}, 500);
+	showItems();
+};
+
+const showItems = () => {
+	const navItems = document.querySelectorAll('nav li');
+	navItems.forEach((item) => {
+		const navItemFromView = item.getBoundingClientRect();
+		navItemFromView.top > 0 && navItemFromView.bottom < vh ? item.classList.add('open') : item.classList.remove('open');
+	});
 };
 
 const clearX = () => {
@@ -40,6 +44,27 @@ const clearIcons = () => {
 	}
 };
 
+const revert = (elems) => {
+	elems.forEach((elem) => {
+		elem.style.transition = '250ms ease-in-out';
+	});
+};
+
+const animate = () => {
+	const cards = document.querySelectorAll('.head-card');
+	cards.forEach((card, index) => {
+	    setTimeout(() => {
+			card.style.transition = '750ms ease-in-out';
+			card.style.transform = 'translateX(0)';
+		}, 200 * index);
+	})
+	cards[cards.length - 1].addEventListener('transitionend', () => {
+		revert(cards);
+	});
+};
+
+window.addEventListener('DOMContentLoaded', animate);
 navToggle.addEventListener('click', toggleNav);
 nav.addEventListener('scroll', clearX);
+nav.addEventListener('scroll', showItems);
 window.addEventListener('scroll', clearIcons);
