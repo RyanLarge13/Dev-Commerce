@@ -86,19 +86,20 @@ const enableScroll = () => {
   const sec1 = document.querySelector(".sec-1");
   const sec1Top = (100 / vh) * sec1.getBoundingClientRect().top;
   timeLine.pointerEvents = "none";
-  if (sec1Top < 10 && sec1Top > -10) {
+  if (sec1Top < 5 && sec1Top > -5) {
     dotHolder.style.overflowY = "auto";
     disableScroll("start");
     timeLine.style.pointerEvents = "auto";
   }
-  if (sec1Top > 10 || sec1Top < -10) timeLine.style.pointerEvents = "none";
+  if (sec1Top > 20 || sec1Top < -20) timeLine.style.pointerEvents = "none";
 };
 
 const checkForEnd = () => {
   const allDots = document.querySelectorAll(".dot");
   const bottom = allDots[allDots.length - 1];
   const percentage = (100 / vh) * bottom.getBoundingClientRect().bottom;
-  if (percentage < 100) {
+  window.removeEventListener("scroll", enableScroll);
+  if (percentage < 150) {
     disableScroll("end");
   }
 };
@@ -106,13 +107,14 @@ const checkForEnd = () => {
 const disableScroll = (param) => {
   if (param === "end") {
     timeLine.style.pointerEvents = "none";
-    return window.scrollTo(0, vh * 2);
-    dotHolder.scrollTo(0, 0);
+    window.scrollTo(0, vh * 2);
+    setTimeout(() => {
+      window.addEventListener("scroll", enableScroll);
+    }, 2000);
   }
   if (param === "start") {
-  	window.removeEventListener('scroll', enableScroll);
-  	return window.scrollTo(0, vh);
-  } 
+    window.scrollTo(0, vh);
+  }
 };
 
 dotHolder.addEventListener("scroll", fade);

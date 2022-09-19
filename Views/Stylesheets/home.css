@@ -206,12 +206,15 @@ header {
     justify-content: flex-end;
     padding-bottom: 5em;
   }
-  header p {
+  header .type-writer {
     width: 50%;
   }
 }
 header h1 {
   margin-bottom: 0.25em;
+}
+header .type-writer {
+  height: max-content;
 }
 header .card-container {
   margin-top: 4em;
