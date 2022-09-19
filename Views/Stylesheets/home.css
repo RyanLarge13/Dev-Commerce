@@ -267,7 +267,6 @@ header .card-container .head-card .text {
 }
 .sec-1 h2 {
   top: 2em;
-  position: -webkit-sticky;
   position: sticky;
 }
 .sec-1 .fa-timeline {
@@ -279,6 +278,7 @@ header .card-container .head-card .text {
   height: 90%;
   overflow-y: auto;
   position: relative;
+  pointer-events: none;
 }
 .time-line-container .line {
   position: absolute;
@@ -358,4 +358,6 @@ header .card-container .head-card .text {
 .sec-2 #googleMap {
   height: 100%;
   width: 100%;
-}/*# sourceMappingURL=home.css.map */
+}
+
+/*# sourceMappingURL=home.css.map */

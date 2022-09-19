@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-}
+} 
 
 //variables
 $trans-fast: 250ms ease-in-out;
@@ -312,6 +312,7 @@ header {
 	height: 90%;
 	overflow-y: auto;
 	position: relative;
+	pointer-events: none;
 	
 	.line {
 		position: absolute;
