@@ -1,6 +1,7 @@
 const timeLine = document.querySelector(".time-line-container");
 const timeLineItem = document.querySelectorAll(".dot");
 const dotHolder = document.querySelector(".dots-holder");
+const heading = document.querySelector('.sec-1 h2');
 const vh = window.innerHeight;
 const body = document.querySelector("body");
 let dotTop = 10;
@@ -99,7 +100,7 @@ const checkForEnd = () => {
   const bottom = allDots[allDots.length - 1];
   const percentage = (100 / vh) * bottom.getBoundingClientRect().bottom;
   window.removeEventListener("scroll", enableScroll);
-  if (percentage < 150) {
+  if (percentage < 100) {
     disableScroll("end");
   }
 };
@@ -110,6 +111,7 @@ const disableScroll = (param) => {
     window.scrollTo(0, vh * 2);
     setTimeout(() => {
       window.addEventListener("scroll", enableScroll);
+      dotHolder.scrollTo(0, 0);
     }, 2000);
   }
   if (param === "start") {
@@ -119,3 +121,4 @@ const disableScroll = (param) => {
 
 dotHolder.addEventListener("scroll", fade);
 window.addEventListener("scroll", enableScroll);
+heading.addEventListener('click', () => window.scrollTo(0, vh));

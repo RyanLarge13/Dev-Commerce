@@ -139,6 +139,7 @@ nav {
   background-color: #fff;
   transform: translateX(-105%);
   transition: 500ms ease-in-out;
+  scroll-behavior: smooth;
   z-index: 998;
 }
 nav .logo {
@@ -186,6 +187,19 @@ nav ul li i {
 nav ul li.open {
   transform: translateX(0);
 }
+nav .connect {
+  padding: 2em 0.5em;
+  align-items: flex-start;
+  position: absolute;
+}
+nav .connect a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.75em;
+}
+nav .connect a:hover {
+  cursor: pointer;
+}
 @media (min-width: 1301px) and (max-width: 2000px) {
   nav {
     width: 40vw;
@@ -214,7 +228,12 @@ header h1 {
   margin-bottom: 0.25em;
 }
 header .type-writer {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
+}
+header .type-writer:hover {
+  cursor: pointer;
 }
 header .card-container {
   margin-top: 4em;
@@ -270,7 +289,11 @@ header .card-container .head-card .text {
 }
 .sec-1 h2 {
   top: 2em;
+  position: -webkit-sticky;
   position: sticky;
+}
+.sec-1 h2:hover {
+  cursor: pointer;
 }
 .sec-1 .fa-timeline {
   float: right;
@@ -359,8 +382,6 @@ header .card-container .head-card .text {
 }
 
 .sec-2 #googleMap {
-  height: 100%;
-  width: 100%;
-}
-
-/*# sourceMappingURL=home.css.map */
+  height: 250px;
+  width: 250px;
+}/*# sourceMappingURL=home.css.map */

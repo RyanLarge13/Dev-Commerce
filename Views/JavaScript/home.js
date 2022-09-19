@@ -6,7 +6,13 @@ const listItems = document.querySelectorAll('nav li');
 const dropShadow = document.querySelector('.drop-shadow');
 const asideIcons = document.querySelectorAll('aside i');
 
+const createEvent = (shadow) => {
+	shadow.style.pointerEvents = 'unset';
+	shadow.addEventListener('click', toggleNav);
+};
+
 const toggleNav = () => {
+	dropShadow.style.pointerEvents = 'none';
 	nav.classList.toggle('open');
 	dropShadow.classList.toggle('open');
 	spans.forEach((span) => {
@@ -15,7 +21,9 @@ const toggleNav = () => {
 	setTimeout(() => {
 		logo.classList.toggle('open');
 	}, 500);
+	if (dropShadow.classList.contains('open')) createEvent(dropShadow);
 	showItems();
+	if (!nav.classList.contains('open')) nav.scrollTo(0, 0);
 };
 
 const showItems = () => {
