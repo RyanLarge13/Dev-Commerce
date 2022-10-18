@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('../Frontend/views'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// app.use('/');
 
 //Adding in initial get request for app homepage in my server.js file
 app.get('/', (req, res) => {
