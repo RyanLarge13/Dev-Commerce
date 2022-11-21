@@ -1,0 +1,17 @@
+$trans-med-slo: 750ms ease-in-out;
+aside {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 3em;
+	height: 100vh;
+
+	i {
+		margin: 1em 0;
+		transition: $trans-med-slo;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

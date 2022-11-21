@@ -1,0 +1,11 @@
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 100vh; }
+  aside i {
+    margin: 1em 0;
+    transition: 750ms ease-in-out; }
+    aside i:hover {
+      cursor: pointer; }

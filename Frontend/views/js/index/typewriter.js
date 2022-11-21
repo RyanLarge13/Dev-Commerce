@@ -2,7 +2,7 @@ let interval = 0;
 const delay = 50;
 const elem = document.querySelector(".type-writer");
 const text =
-  "My name is Ryan Large, I am a fullstack web developer with a strong understanding of html, css & JavaScript. My strengths lie in the MERN stack (M-ongoDB, E-xpress, R-eact, N-ode.js). The knowledge in these frameworks, libraries & programming languages is a powerful and extensive tool to have in your developing arsenal. Be sure to view my best work using these languages.";
+  "My name is Ryan Large, I am a fullstack web developer. My strengths lie in the MERN stack. Be sure to view my best work using these languages and frameworks.";
 
 const type = () => {
   if (interval < text.length) {
