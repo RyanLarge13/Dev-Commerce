@@ -20,7 +20,8 @@
 
 .sec {
   padding-left: 13%;
-  padding-right: 10%; }
+  padding-right: 10%;
+  width: 100vw; }
 
 html {
   scroll-behavior: smooth;
