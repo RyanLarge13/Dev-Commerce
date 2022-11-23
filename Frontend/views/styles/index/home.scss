@@ -374,6 +374,16 @@ hr {
 		line-height: 1.25em;
 		width: 105%;
 	}
+	h4 {
+		border-left: 1px solid rgb(255,0,255);
+		padding-left: 0.5em;
+		margin-top: 2em;
+		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: 500;
+		color: rgb(255,0,255);
+	}
 	#wave {
 		position: absolute;
 		top: 0;

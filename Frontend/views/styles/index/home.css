@@ -329,6 +329,14 @@ hr {
     font-size: 1.75em;
     line-height: 1.25em;
     width: 105%; }
+  .sec-3 h4 {
+    border-left: 1px solid magenta;
+    padding-left: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 1em; }
+  .sec-3 strong {
+    font-weight: 500;
+    color: magenta; }
   .sec-3 #wave {
     position: absolute;
     top: 0;
