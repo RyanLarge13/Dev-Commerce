@@ -18,3 +18,4 @@ const animate = () => {
 };
 
 window.addEventListener("DOMContentLoaded", animate);
+document.querySelector(".future-date").innerHTML = new Date().getFullYear() + 3;
