@@ -271,6 +271,8 @@ hr {
       font-size: 1em;
       color: #95b7ed;
       margin-bottom: 2em; }
+    .sec-2 .follow-clip .code {
+      min-height: 75px; }
     .sec-2 .follow-clip .code-strong {
       margin-left: 2em;
       color: #1f9;

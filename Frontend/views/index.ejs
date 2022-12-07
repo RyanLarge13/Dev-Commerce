@@ -7,6 +7,7 @@
 <meta name="description" content="About Me Page" />
 <link rel="stylesheet" href="/global/global.css" />
 <link rel="stylesheet" href="/styles/index/home.css" />
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script type="module" src="/global/global.js"></script>
 <script defer src="/js/index/home.js"></script>
 <script type="module" src="/js/index/typewriter.js"></script>
@@ -34,7 +35,7 @@ src="https://miro.medium.com/max/1072/1*rLnrIrpIywxyEX-Vt51l3Q.png"
 <%-include('./partials/Nav/Nav.ejs')%>
 <header class="width">
 <h1>R. Largè</h1>
-<p class="type-writer"></p>
+<p id="type-writer" class="type-writer"></p>
 <hr>
 <h2>Start With A Service</h2>
 <div class="card-container flex">
@@ -83,7 +84,9 @@ pick a framework
 <div class="clip"></div>
 <div class="follow-clip">
 <h2>Robotics & Machine Learning</h2>
-<code>{ <br> <strong class="code-strong">success ? true : success;</strong><br> }</code>
+<div class="code">
+<code id="terminal-typer"></code>
+</div>
 <p>
 An amazing team of developers from around the world, each with their own area of expertise... Making Dev Commerce the ultimate way to handle your business.
 </p>

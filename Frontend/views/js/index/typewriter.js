@@ -1,19 +1,40 @@
-let interval = 0;
-const delay = 50;
-const elem = document.querySelector(".type-writer");
-const text =
-  "My name is Ryan Large, I am a fullstack web developer. My strengths lie in the MERN stack. Be sure to view my best work using these languages and frameworks.";
+const type = document.getElementById("type-writer");
+const terminalType = document.getElementById("terminal-typer");
 
-const type = () => {
-  if (interval < text.length) {
-    elem.innerHTML += text.charAt(interval);
-    interval++;
-    let recursion = setTimeout(type, delay);
-    elem.addEventListener("click", () => {
-      clearTimeout(recursion);
-      return (elem.innerHTML = text);
-    });
-  }
-};
+const typewriter = new Typewriter(type, {
+  loop: false,
+  delay: 75,
+});
 
-window.addEventListener("DOMContentLoaded", type);
+const terminalTyper = new Typewriter(terminalType, {
+  loop: true,
+  delay: 75,
+});
+
+typewriter
+  .pauseFor(2000)
+  .typeString("My name is <strong>Ryan Large</strong>, ")
+  .pauseFor(750)
+  .typeString("I am a fullstack Web Designer.")
+  .pauseFor(300)
+  .deleteChars(10)
+  .typeString("<strong> Developer.. </strong>")
+  .pauseFor(750)
+  .typeString("My strengths lie in the MERN stack.")
+  .pauseFor(300)
+  .typeString(
+    " Be sure to view my best work using these <strong>languages</strong> and <strong>frameworks.</strong>"
+  )
+  .start();
+
+terminalTyper
+  .pauseFor(250)
+  .typeString("{ <br> ")
+  .pauseFor(500)
+  .typeString("<strong class='code-strong'>success ?")
+  .pauseFor(1000)
+  .typeString(" true : success;</strong><br>")
+  .pauseFor(500)
+  .typeString("}")
+  .pauseFor(1500)
+  .start();
