@@ -1,0 +1,15 @@
+.popup {
+	display: none;
+	position: fixed;
+	bottom: 5%;
+	left: 5%;
+	width: 30%;
+	height: 10%;
+	border-radius: 1em;
+	box-shadow: 0.1em 0.1em 0.25em 0 #aaa;
+	z-index: 999;
+}
+.popup.show {
+	display: flex;
+	transition: 250ms ease-in-out;
+}
