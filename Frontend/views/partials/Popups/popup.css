@@ -7,8 +7,11 @@
   height: 10%;
   border-radius: 1em;
   box-shadow: 0.1em 0.1em 0.25em 0 #aaa;
-  z-index: 999; }
+  z-index: 999;
+}
 
 .popup.show {
   display: flex;
-  transition: 250ms ease-in-out; }
+  transition: 250ms ease-in-out;
+  background-color: #fff;
+}/*# sourceMappingURL=popup.css.map */

@@ -1,5 +1,6 @@
 nav.open {
-  transform: translateX(0); }
+  transform: translateX(0);
+}
 
 nav {
   padding: 4em 0.75em 5em 0.5em;
@@ -17,62 +18,77 @@ nav {
   transform: translateX(-105%);
   transition: 500ms ease-in-out;
   scroll-behavior: smooth;
-  z-index: 998; }
-  nav .logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 1em;
-    font-weight: 600;
-    transform: translateY(-300%);
-    transition: 500ms ease-in-out; }
-    nav .logo a {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer; }
-  nav .logo.open {
-    transform: translateY(0); }
-  nav h2 {
-    font-size: 1.25em;
-    margin-top: 1.25em; }
-  nav ul {
-    font-size: 0.75em; }
-    nav ul li {
-      list-style-type: none;
-      width: 80%;
-      padding: 0.75em 0.5em;
-      margin: 1em 0 1em 1em;
-      box-shadow: 0 0 0.25em 0 #000;
-      border-radius: 0.5em;
-      background-color: #eee;
-      font-weight: 700;
-      transform: translateX(-150%);
-      transition: 500ms ease-in-out;
-      display: flex;
-      background-image: linear-gradient(45deg, #eee, #eef, #95b7ed, magenta);
-      background-size: 300%;
-      background-position: left; }
-      nav ul li:hover {
-        cursor: pointer;
-        color: #fff;
-        background-position: right; }
-      nav ul li i {
-        font-size: 1.25em;
-        margin-left: 5%; }
-    nav ul li.open {
-      transform: translateX(0); }
-  nav .connect {
-    padding: 2em 0.5em;
-    align-items: flex-start; }
-    nav .connect a {
-      text-decoration: none;
-      color: #000;
-      font-size: 0.75em; }
-      nav .connect a:hover {
-        cursor: pointer; }
-
+  z-index: 998;
+}
+nav .logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  font-weight: 600;
+  transform: translateY(-300%);
+  transition: 500ms ease-in-out;
+}
+nav .logo a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav .logo.open {
+  transform: translateY(0);
+}
+nav h2 {
+  font-size: 1.25em;
+  margin-top: 1.25em;
+}
+nav ul {
+  font-size: 0.75em;
+}
+nav ul li {
+  list-style-type: none;
+  width: 80%;
+  padding: 0.75em 0.5em;
+  margin: 1em 0 1em 1em;
+  box-shadow: 0 0 0.25em 0 #000;
+  border-radius: 0.5em;
+  background-color: #eee;
+  font-weight: 700;
+  transform: translateX(-150%);
+  transition: 500ms ease-in-out;
+  display: flex;
+  background-image: linear-gradient(45deg, #eee, #eef, rgb(149, 183, 237), rgb(255, 0, 255));
+  background-size: 300%;
+  background-position: left;
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: #fff;
+  background-position: right;
+}
+nav ul li i {
+  font-size: 1.25em;
+  margin-left: 5%;
+}
+nav ul li.open {
+  transform: translateX(0);
+}
+nav .connect {
+  padding: 2em 0.5em;
+  align-items: flex-start;
+}
+nav .connect a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.75em;
+}
+nav .connect a:hover {
+  cursor: pointer;
+}
 @media (min-width: 1301px) and (max-width: 2000px) {
   nav {
-    width: 40vw; }
-    nav::-webkit-scrollbar {
-      display: none; } }
+    width: 40vw;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+}/*# sourceMappingURL=nav.css.map */

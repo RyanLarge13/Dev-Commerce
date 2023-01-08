@@ -1,6 +1,9 @@
 export const showLogin = () => {
   const popup = document.querySelector(".popup");
-  popup.classList.add(".show");
+  const text = popup.querySelector("p");
+  popup.classList.add("show");
+  text.innerText = "Login here!";
 };
 
-window.addEventListener("DOMContentLoaded", showLogin);
+// window.addEventListener("DOMContentLoaded", showLogin);
+// showLogin();
