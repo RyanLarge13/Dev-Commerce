@@ -475,10 +475,102 @@ hr {
 .sec-5 {
 	h2 {
 		font-size: 2em;
+		margin-bottom: 2em;
 		&:first-letter {
 			color: rgba(149, 183, 237, 0.6);
 			font-weight: bold;
 			font-size: 3em;
 		}
+	}
+}
+
+.post {
+	overflow: hidden;
+	margin: auto;
+	padding: 1em;
+	position: relative;
+	width: 90%;
+	height: 50vh;
+	border-radius: 1em;
+	background-color: #fff;
+	box-shadow: 0 0.1em 0.25em 0 #aaa;
+	.image-container {
+		all: unset;
+		img {
+			all: unset;
+		}
+	}
+	h2 {
+		margin-bottom: 0;
+		&:first-letter {
+			all: unset;
+		}
+	}
+	.post-desc {
+		font-weight: 600;
+		margin: 0.5em 0.5em 0 0;
+	}
+	.comments {
+		position: absolute;
+		bottom: 19%;
+		left: 6%;
+	}
+	.likes {
+		position: absolute;
+		bottom: 19%;
+		right: 6%;
+	}
+	.like-btn {
+		position: absolute;
+		bottom: 12%;
+		right: 4%;
+		font-size: 1.5em;
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+	.comment-btn {
+		position: absolute;
+		bottom: 12%;
+		left: 4%;
+		font-size: 1.5em;
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+	.view-post-container {
+		overflow: hidden;
+		min-height: 10%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(10, 255, 100, 0.2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.5em;
+		box-shadow: 0 -0.1em 0.5em 0 #eee;
+
+		button {
+			border: none;
+			outline: none;
+			background-color: transparent;
+			font-weight: 600;
+			position: absolute;
+			padding: 5em;
+		}
+	}
+}
+.slider-dots-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px 0;
+	.slider-dots {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #000;
 	}
 }

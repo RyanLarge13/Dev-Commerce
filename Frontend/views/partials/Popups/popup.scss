@@ -1,17 +1,22 @@
 .popup {
 	display: none;
+	padding: 1em;
+	font-size: 0.75em;
 	position: fixed;
-	bottom: 5%;
-	left: 5%;
-	width: 30%;
-	height: 10%;
-	border-radius: 1em;
+	bottom: 6%;
+	left: 10%;
+	width: 100px;
+	height: 75px;
+	border-radius: 1em 1em 1em 0;
 	box-shadow: 0.1em 0.1em 0.25em 0 #aaa;
 	z-index: 999;
+	transition: 250ms ease-in-out;
 }
 
 .popup.show {
+	transform: scale(0);
+	transform-origin: bottom left;
 	display: flex;
-	transition: 250ms ease-in-out;
+	justify-content: center;
 	background-color: #fff;
 }
