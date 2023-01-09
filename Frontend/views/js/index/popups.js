@@ -5,14 +5,16 @@ export const showLogin = () => {
   text.innerText = "Login here!";
   setTimeout(() => {
     popup.style.transform = "scale(1)";
-  }, 1);
-  setTimeout(() => {
-    popup.style.transform = "scale(0)";
-  }, 3000);
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 3300);
+    window.addEventListener("scroll", (e) => {
+      closePopup(popup);
+    });
+  }, 500);
 };
 
-// window.addEventListener("DOMContentLoaded", showLogin);
-// showLogin();
+const closePopup = (popup) => {
+  popup.style.transform = "scale(0)";
+  setTimeout(() => {
+    popup.style.display = "none";
+    window.removeEventListener("scroll", closePopup)
+  }, 301);
+};

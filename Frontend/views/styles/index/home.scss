@@ -475,7 +475,7 @@ hr {
 .sec-5 {
 	h2 {
 		font-size: 2em;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 		&:first-letter {
 			color: rgba(149, 183, 237, 0.6);
 			font-weight: bold;
@@ -513,12 +513,14 @@ hr {
 	.comments {
 		position: absolute;
 		bottom: 19%;
-		left: 6%;
+		left: 7%;
+		font-size: 0.75em;
 	}
 	.likes {
 		position: absolute;
 		bottom: 19%;
-		right: 6%;
+		right: 7%;
+		font-size: 0.75em;
 	}
 	.like-btn {
 		position: absolute;
@@ -571,6 +573,6 @@ hr {
 		width: 15px;
 		height: 15px;
 		border-radius: 50%;
-		background-color: #000;
+		background-color: #030349;
 	}
 }
