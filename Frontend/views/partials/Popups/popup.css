@@ -10,7 +10,8 @@
   border-radius: 1em 1em 1em 0;
   box-shadow: 0.1em 0.1em 0.25em 0 #aaa;
   z-index: 999;
-  transition: 250ms ease-in-out; }
+  transition: 250ms ease-in-out;
+}
 
 .popup.show {
   transform: scale(0);
@@ -18,4 +19,5 @@
   display: flex;
   justify-content: center;
   background-color: #fff;
-  font-weight: 600; }
+  font-weight: 600;
+}/*# sourceMappingURL=popup.css.map */
