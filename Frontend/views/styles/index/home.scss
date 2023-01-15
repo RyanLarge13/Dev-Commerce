@@ -566,20 +566,14 @@ hr {
 	position: relative;
 	width: 90%;
 	height: 50vh;
-	border-radius: 1em;
+	border-radius: 5px;
 	background-color: #fff;
 	box-shadow: 0 0.1em 0.25em 0 #aaa;
 
-	.image-container {
-		overflow: hidden;
-		border-radius: 10px;
-
-		.post-img {
-			all: unset;
-			max-height: 100px;
-			min-width: 100%;
-			border-radius: 10px;
-		}
+	.post-img {
+		all: unset;
+		max-height: 100px;
+		min-width: 100%;
 	}
 
 	h2 {
@@ -642,7 +636,7 @@ hr {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 0.5em;
+		border-radius: 5px;
 		box-shadow: 0 -0.1em 0.5em 0 #eee;
 		transition: $trans-fast;
 
