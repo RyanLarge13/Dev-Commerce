@@ -1,0 +1,68 @@
+.login-container {
+  position: fixed;
+  top: 150%;
+  left: 12%;
+  width: 76%;
+  height: 90%;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 998;
+  padding: 1em;
+  transition: 500ms ease-in-out; }
+  .login-container .login-form-container h2 {
+    border-bottom: 1px solid black;
+    padding: 5px; }
+  .login-container .login-form-container button {
+    padding: 1em 0;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0.1em 0.25em 0 #aaa;
+    color: #fff; }
+  .login-container .login-form-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 33%; }
+    .login-container .login-form-container form input {
+      margin-bottom: 1em;
+      padding: 15px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0.1em 0.25em 0 #aaa;
+      border-radius: 5px; }
+      .login-container .login-form-container form input:focus {
+        outline: none;
+        border: none; }
+    .login-container .login-form-container form .login-email-btn {
+      background-image: linear-gradient(45deg, #95b7ed, magenta);
+      font-weight: 600; }
+      .login-container .login-form-container form .login-email-btn i {
+        font-size: 1.25em; }
+  .login-container .login-form-container .signin-with-oauth-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 60%; }
+    .login-container .login-form-container .signin-with-oauth-container button {
+      margin: 10px 0; }
+      .login-container .login-form-container .signin-with-oauth-container button i {
+        font-size: 1.25em; }
+    .login-container .login-form-container .signin-with-oauth-container .google {
+      background-image: linear-gradient(45deg, #4285f4 33%, #ea4335 33% 66%, #fbbc05 33%); }
+    .login-container .login-form-container .signin-with-oauth-container .github {
+      background-image: linear-gradient(45deg, #0d1117 50%, #21262d 50%); }
+    .login-container .login-form-container .signin-with-oauth-container .facebook {
+      background-image: linear-gradient(45deg, #29487d 50%, #3c5898 50%); }
+  .login-container a {
+    position: absolute;
+    bottom: 10px;
+    width: 24%;
+    left: 38%;
+    color: #000; }
+
+.login-container.show {
+  top: 10%; }

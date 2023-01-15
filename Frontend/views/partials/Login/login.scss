@@ -1,18 +1,86 @@
 .login-container {
-  position: fixed;
-  top: 15%;
-  border-radius: 5px;
-.login-form-container {
-  form {
-    input {
-      
-    }
-    button {
-      
-    }
-  }
-}
+	position: fixed;
+	top: 150%;
+	left: 12%;
+	width: 76%;
+	height: 90%;
+	border-radius: 5px;
+	background-color: #fff;
+	z-index: 998;
+	padding: 1em;
+	transition: 500ms ease-in-out;
+	.login-form-container {
+		h2 {
+			border-bottom: 1px solid black;
+			padding: 5px;
+		}
+		button {
+			padding: 1em 0;
+			border: none;
+			outline: none;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0.1em 0.25em 0 #aaa;
+			color: #fff;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			max-width: 80%;
+			margin: auto;
+			margin-top: 33%;
+			input {
+				margin-bottom: 1em;
+				padding: 15px;
+				border: none;
+				outline: none;
+				box-shadow: 0 0.1em 0.25em 0 #aaa;
+				border-radius: 5px;
+				&:focus {
+					outline: none;
+					border: none;
+				}
+			}
+			.login-email-btn {
+				background-image: linear-gradient(45deg, rgb(149, 183, 237), rgb(255, 0, 255));
+				font-weight: 600;
+				i {
+					font-size: 1.25em;
+				}
+			}
+		}
+		.signin-with-oauth-container {
+			display: flex;
+			flex-direction: column;
+			max-width: 80%;
+			margin: auto;
+			margin-top: 60%;
+			button {
+				margin: 10px 0;
+
+				i {
+					font-size: 1.25em;
+				}
+			}
+			.google {
+				background-image: linear-gradient(45deg, #4285f4 33%, #ea4335 33% 66%, #fbbc05 33%);
+			}
+			.github {
+				background-image: linear-gradient(45deg, #0d1117 50%, #21262d 50%);
+			}
+			.facebook {
+				background-image: linear-gradient(45deg, #29487d 50%, #3c5898 50%);
+			}
+		}
+	}
+	a {
+		position: absolute;
+		bottom: 10px;
+		width: 24%;
+		left: 38%;
+		color: #000;
+	}
 }
 .login-container.show {
-    
+	top: 10%;
 }

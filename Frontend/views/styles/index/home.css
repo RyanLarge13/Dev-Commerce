@@ -122,7 +122,11 @@ body {
   z-index: 999;
   background-color: #030349;
   color: #fff;
-  border-radius: 50%; }
+  border-radius: 50%;
+  transition: 500ms ease-in-out; }
+
+.login-toggle.clicked {
+  transform: rotateZ(-90deg); }
 
 img {
   position: absolute;
