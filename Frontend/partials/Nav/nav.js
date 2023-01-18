@@ -1,13 +1,24 @@
+import { openModal } from "../Login/login.js";
+
 export const toggleNav = () => {
+  const loginModal = document.querySelector(".login-container");
   const nav = document.querySelector("nav");
   const dropShadow = document.querySelector(".drop-shadow");
   const logo = document.querySelector(".logo");
   const spans = document.querySelectorAll(".nav-toggle span");
+  const popup = document.querySelector(".popup");
+  popup.classList.remove("show");
+
+  if (loginModal.classList.contains("show")) {
+    openModal();
+  }
+
+  dropShadow.removeEventListener("click", openModal);
   nav.classList.toggle("open");
-  dropShadow.classList.toggle("open");
   spans.forEach((span) => {
     span.classList.toggle("open");
   });
+  dropShadow.classList.toggle("open");
   setTimeout(() => {
     logo.classList.toggle("open");
   }, 500);

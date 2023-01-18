@@ -1,11 +1,23 @@
+import { toggleNav } from "../Nav/nav.js";
+
 export const openModal = (e) => {
   const loginModal = document.querySelector(".login-container");
   const dropShadow = document.querySelector(".drop-shadow");
   const loginBtn = document.querySelector(".login-toggle");
+  const nav = document.querySelector("nav");
+  const popup = document.querySelector(".popup");
 
+  popup.classList.remove("show");
   loginModal.classList.toggle("show");
   dropShadow.classList.toggle("open");
   loginBtn.classList.toggle("clicked");
+  dropShadow.removeEventListener("click", toggleNav);
+  dropShadow.addEventListener("click", openModal);
+
+  if (nav.classList.contains("open")) {
+    toggleNav();
+    openModal()
+  }
 
   checkForUser();
 };

@@ -8,9 +8,9 @@ connectDB();
 const app = express();
 
 //Middleware
-app.set("views", "../Frontend/views");
+app.set("views", "../Frontend");
 app.set("view engine", "ejs");
-app.use(express.static("../Frontend/views"));
+app.use(express.static("../Frontend"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRouter);

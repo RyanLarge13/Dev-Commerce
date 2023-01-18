@@ -41,12 +41,16 @@
       font-weight: 600; }
       .login-container .login-form-container form .login-email-btn i {
         font-size: 1.25em; }
+  .login-container .login-form-container p {
+    text-align: center;
+    margin-top: 50%;
+    border-bottom: 1px solid black; }
   .login-container .login-form-container .signin-with-oauth-container {
     display: flex;
     flex-direction: column;
     max-width: 80%;
     margin: auto;
-    margin-top: 60%; }
+    margin-top: 10%; }
     .login-container .login-form-container .signin-with-oauth-container button {
       margin: 10px 0; }
       .login-container .login-form-container .signin-with-oauth-container button i {

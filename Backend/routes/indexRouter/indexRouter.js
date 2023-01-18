@@ -1,6 +1,6 @@
 import express from "express";
-import { renderBlogs } from "../../controllers/index.js";
+import { renderIndex } from "../../controllers/index.js";
 
 export const indexRouter = express.Router();
 
-indexRouter.route("/").get(renderBlogs);
+indexRouter.route("/").get(renderIndex);

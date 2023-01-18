@@ -5,7 +5,7 @@ const blogSchema = mongoose.Schema(
     Author: {
       type: String,
       required: true,
-    }, 
+    },
     Title: {
       type: String,
       required: true,
@@ -15,9 +15,9 @@ const blogSchema = mongoose.Schema(
       required: true,
     },
     ImageUrl: {
-    	type: String,
-    	required: true
-    }, 
+      type: String,
+      required: true,
+    },
     Catagories: {
       type: [String],
     },

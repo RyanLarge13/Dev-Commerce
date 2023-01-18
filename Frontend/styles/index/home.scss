@@ -672,3 +672,43 @@ hr {
 		background-color: #030349;
 	}
 }
+.view-more {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1em 2em;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	box-shadow: 0 0.1em 0.25em 0 #eee;
+}
+.blog-options-container {
+	margin-top: 33%;
+	h3 {
+		border-left: 1px solid #f0f;
+		padding-left: 5px;
+		margin-bottom: 0.25em;
+	}
+	p {
+		font-size: 0.9em;
+	}
+	.blog-options-btn-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1em;
+		margin: 1em 0;
+		margin-bottom: 15%;
+		border-bottom: 1px solid black;
+		padding: 1em 0;
+		button {
+			border: none;
+			outline: none;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 1.5em 1em;
+			max-width: 100%;
+			box-shadow: 0 0.1em 0.25em 0 #eee;
+		}
+	}
+}

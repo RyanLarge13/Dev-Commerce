@@ -49,12 +49,17 @@
 				}
 			}
 		}
+		p {
+			text-align: center;
+			margin-top: 50%;
+			border-bottom: 1px solid black;
+		}
 		.signin-with-oauth-container {
 			display: flex;
 			flex-direction: column;
 			max-width: 80%;
 			margin: auto;
-			margin-top: 60%;
+			margin-top: 10%;
 			button {
 				margin: 10px 0;
 
