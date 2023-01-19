@@ -4,17 +4,21 @@ export const showLogin = () => {
   popup.classList.add("show");
   text.innerText = "Login here!";
   setTimeout(() => {
-    popup.style.transform = "scale(1)";
-    window.addEventListener("scroll", (e) => {
-      closePopup(popup);
-    });
-  }, 500);
+  popup.style.transform = "scale(1)";
+  	
+  }, 250)
+  setTimeout(() => {
+    closePopup(popup);
+  }, 3500);
+  window.addEventListener("scroll", (e) => {
+    closePopup(popup);
+  });
 };
 
 const closePopup = (popup) => {
   popup.style.transform = "scale(0)";
   setTimeout(() => {
     popup.style.display = "none";
-    window.removeEventListener("scroll", closePopup)
+    window.removeEventListener("scroll", closePopup);
   }, 301);
 };

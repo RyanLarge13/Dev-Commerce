@@ -374,7 +374,22 @@ hr {
 .sec-4 {
   margin-top: 10%;
   padding: 0;
-  z-index: 5; }
+  z-index: 5;
+  position: relative; }
+  .sec-4 .design-pink {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 0, 255, 0.4); }
+  .sec-4 .design-green {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(17, 255, 153, 0.8); }
   .sec-4 .clip {
     width: 100%;
     height: 25vh;
@@ -417,14 +432,22 @@ hr {
 
 .sec-5 h2 {
   font-size: 2em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 25%; }
   .sec-5 h2:first-letter {
     color: rgba(149, 183, 237, 0.6);
     font-weight: bold;
     font-size: 3em; }
 
+.sec-5 h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 5%; }
+
+.sec-5 .blog-container {
+  margin-bottom: 25%; }
+
 .post {
-  overflow: hidden;
   margin: auto;
   padding: 1em;
   position: relative;
@@ -432,19 +455,30 @@ hr {
   height: 50vh;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 0.1em 0.25em 0 #aaa; }
-  .post .post-img {
-    all: unset;
-    max-height: 100px;
-    min-width: 100%; }
+  box-shadow: 0 0.5em 1em 0 #aaa; }
+  .post .image-container {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    max-height: 105px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0.1em 0.25em 0 #000; }
+    .post .image-container .post-img {
+      all: unset;
+      max-height: 105px;
+      min-width: 100%; }
   .post h2 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 100px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px; }
     .post h2:first-letter {
       all: unset;
       font-size: 1.25em;
       color: rgba(149, 183, 237, 0.6); }
   .post .post-desc {
-    font-weight: 600;
     margin: 0.5em 0.5em 0 0; }
   .post .comments {
     position: absolute;
@@ -479,7 +513,7 @@ hr {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(10, 255, 100, 0.2);
+    background-color: rgba(255, 0, 255, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -487,7 +521,7 @@ hr {
     box-shadow: 0 -0.1em 0.5em 0 #eee;
     transition: 250ms ease-in-out; }
     .post .view-post-container:hover {
-      background-color: rgba(17, 255, 153, 0.8); }
+      background-color: rgba(10, 255, 100, 0.2); }
     .post .view-post-container button {
       border: none;
       outline: none;
@@ -507,23 +541,17 @@ hr {
     border-radius: 50%;
     background-color: #030349; }
 
-.view-more {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 1em 2em;
-  background-color: #fff;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  box-shadow: 0 0.1em 0.25em 0 #eee; }
-
 .blog-options-container {
-  margin-top: 33%; }
+  margin-top: 25%; }
   .blog-options-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-left: 0; }
+  .blog-options-container h4 {
+    font-size: 1.25em;
     border-left: 1px solid #f0f;
     padding-left: 5px;
-    margin-bottom: 0.25em; }
+    margin-bottom: 0.5em; }
   .blog-options-container p {
     font-size: 0.9em; }
   .blog-options-container .blog-options-btn-container {
@@ -531,14 +559,34 @@ hr {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     margin: 1em 0;
-    margin-bottom: 15%;
-    border-bottom: 1px solid black;
-    padding: 1em 0; }
+    margin-bottom: 15%; }
     .blog-options-container .blog-options-btn-container button {
       border: none;
       outline: none;
-      background-color: #fff;
+      background-color: #030349;
       border-radius: 10px;
       padding: 1.5em 1em;
       max-width: 100%;
-      box-shadow: 0 0.1em 0.25em 0 #eee; }
+      box-shadow: 0 0.1em 0.25em 0 #eee;
+      position: relative;
+      color: #fff; }
+
+.view-all {
+  margin-bottom: 50%;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  border-radius: 10px;
+  background-color: #030349;
+  color: #fff;
+  outline: none;
+  border: none;
+  box-shadow: 0 0.1em 0.25em 0 #eee; }
+
+.sec-6 h2 {
+  font-size: 2em;
+  margin-bottom: 1em; }
+  .sec-6 h2:first-letter {
+    color: rgba(149, 183, 237, 0.6);
+    font-weight: bold;
+    font-size: 3em; }
