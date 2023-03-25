@@ -1,0 +1,771 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.width {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sec {
+  padding-left: 13%;
+  padding-right: 10%;
+  width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.blob-container {
+  z-index: -10;
+  position: fixed;
+  top: 50%;
+  right: -25%;
+  width: 100%;
+  height: 100%;
+}
+
+.top-left-blue {
+  position: fixed;
+  top: -20%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: radial-gradient(#1f9, #1f9);
+  opacity: 0.3;
+  filter: blur(10px);
+}
+
+.bottom-left-purple {
+  position: fixed;
+  bottom: -20%;
+  left: -20%;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-image: radial-gradient(#139, #139);
+  opacity: 0.3;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.drop-shadow {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 500ms ease-in-out;
+  z-index: 998;
+}
+
+.nav-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1em 0 0 0.4em;
+  width: 40px;
+  height: 25px;
+  z-index: 999;
+  transition: 250ms ease-in-out;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-toggle:hover {
+  cursor: pointer;
+}
+.nav-toggle span {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 1em;
+  transition: 500ms ease-in-out;
+  margin: 1px 0;
+}
+.nav-toggle span:nth-child(1) {
+  transition: 250ms ease-in-out;
+  transition-delay: 500ms;
+}
+.nav-toggle span:nth-child(2).open {
+  transform: rotate(45deg) translateY(0.25em);
+}
+.nav-toggle span:nth-child(1).open {
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition-delay: 0ms;
+}
+.nav-toggle span:nth-child(3).open {
+  transform: rotate(-45deg) translateY(-0.25em);
+}
+
+.chat-toggle {
+  position: fixed;
+  padding: 0.5em;
+  bottom: 1%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  z-index: 999;
+  background-color: #030349;
+  color: #fff;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+}
+
+.login-toggle {
+  position: fixed;
+  padding: 0.5em;
+  bottom: 1%;
+  left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  z-index: 999;
+  background-color: #030349;
+  color: #fff;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+}
+
+.login-toggle.clicked {
+  transform: rotateZ(-90deg);
+}
+
+img {
+  position: absolute;
+  top: 5%;
+  width: 100vw;
+  z-index: -1;
+}
+
+.drop-shadow.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+header {
+  padding: 37.5vh 10% 0 13%;
+}
+
+h1 {
+  margin-bottom: 0.25em;
+}
+
+.type-writer {
+  min-height: 15vh;
+  line-height: 1.25em;
+  margin-bottom: 3em;
+}
+.type-writer:hover {
+  cursor: pointer;
+}
+
+hr {
+  transform: translateY(-4em);
+}
+
+.card-container {
+  margin-top: 1.5em;
+  width: 100%;
+  height: 30%;
+  gap: 2em;
+}
+.card-container .head-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.15em 0.5em 0 #696969;
+  transform: translateY(200%);
+  transition: 750ms ease-in-out;
+  background-color: #fff;
+}
+.card-container .head-card:hover {
+  scale: 1.02;
+  cursor: pointer;
+  box-shadow: 0.15em 0.15em 0.75em 0 #696969;
+}
+.card-container .head-card .bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  background-position: center;
+  background-size: cover;
+}
+.card-container .head-card .bg-1 {
+  background-image: url("https://cloudfour.com/wp-content/uploads/2020/05/dev-tools-for-designers-poster.jpg");
+}
+.card-container .head-card .bg-2 {
+  background-image: url("https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg");
+}
+.card-container .head-card .text {
+  height: 25%;
+  font-size: 0.6em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sec-1 h2 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+.sec-1 h2::first-letter {
+  color: rgba(149, 183, 237, 0.6);
+  font-weight: bold;
+  font-size: 3em;
+}
+.sec-1 h3 {
+  margin-top: 0.25em;
+}
+.sec-1 p {
+  line-height: 1.25em;
+}
+.sec-1 .end-link-small {
+  font-size: 0.5em;
+  text-decoration: underline;
+  margin-top: 2em;
+  text-align: center;
+}
+.sec-1 hr {
+  transform: translate(0);
+  margin-top: 2em;
+}
+
+.project-selection-btns {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+.project-selection-btns .project-btn {
+  background-color: #030349;
+  padding: 0.5em 1em;
+  border-radius: 100em;
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 0.5em 0 #999;
+  color: #fff;
+}
+
+.sec-2 {
+  position: relative;
+  margin-top: 0;
+  z-index: 5;
+}
+.sec-2 .top-square-green {
+  position: absolute;
+  right: 20%;
+  top: 21%;
+  width: 50px;
+  height: 75px;
+  background-color: rgba(17, 255, 153, 0.8);
+  transform: translate(80%, -80%);
+  z-index: 10;
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+.sec-2 .top-square-pink {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 80px;
+  height: 75px;
+  background-color: rgba(255, 0, 255, 0.4);
+  float: right;
+  z-index: -1;
+}
+.sec-2 .clip {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  z-index: -1;
+}
+.sec-2 .clip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #030349;
+  -webkit-clip-path: polygon(0 59%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 59%, 100% 0, 100% 100%, 0 100%);
+}
+.sec-2 .overflow-text {
+  z-index: 900;
+  transform: translateY(45%);
+}
+.sec-2 .overflow-text h2 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+  margin-left: 13%;
+  width: 100vw;
+}
+.sec-2 .overflow-text h2::first-letter {
+  color: rgba(255, 0, 255, 0.4);
+  font-weight: bold;
+  font-size: 3em;
+}
+.sec-2 strong {
+  color: #fff;
+  margin-left: 4.75em;
+}
+.sec-2 .follow-clip {
+  transform: translateY(-1px);
+  background-color: #030349;
+  color: #1f9;
+  padding-left: 13%;
+  padding-right: 6%;
+  padding-bottom: 25%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  z-index: 25;
+}
+.sec-2 .follow-clip h2 {
+  font-size: 1em;
+  color: rgb(149, 183, 237);
+  margin-bottom: 2em;
+}
+.sec-2 .follow-clip .code {
+  min-height: 75px;
+}
+.sec-2 .follow-clip .code-strong {
+  margin-left: 2em;
+  color: #1f9;
+  font-weight: 500;
+}
+.sec-2 .follow-clip p {
+  font-size: 0.8em;
+  margin-top: 2em;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.25em;
+}
+.sec-2 .follow-clip p::first-letter {
+  font-size: 1.5em;
+  color: rgb(255, 0, 255);
+}
+.sec-2 .follow-clip button {
+  padding: 0.5em 1em;
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 0.5em 0 #999;
+  background-color: rgb(149, 183, 237);
+  border-radius: 50em;
+  margin-top: 1em;
+  font-weight: 600;
+}
+.sec-2 .follow-clip h4 {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #fff;
+  border-left: 1px solid rgb(255, 0, 255);
+  margin-top: 4em;
+  padding-left: 1em;
+}
+.sec-2 .follow-clip a {
+  font-size: 0.75em;
+  color: #1f9;
+}
+
+.square-color-green {
+  width: 50px;
+  height: 75px;
+  background-color: rgba(17, 255, 153, 0.8);
+  transform: translate(80%, -80%);
+  z-index: 10;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0% 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0% 80%);
+}
+
+.square-color-blue {
+  width: 80px;
+  height: 75px;
+  background-color: rgba(255, 0, 255, 0.4);
+  margin-top: -7em;
+}
+
+.sec-3 {
+  margin-top: 10%;
+  z-index: 2;
+}
+.sec-3 h2 {
+  margin-top: 20%;
+  font-size: 1em;
+  color: rgb(255, 0, 255);
+  margin-bottom: 10%;
+}
+.sec-3 h3 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+  width: 105%;
+}
+.sec-3 h4 {
+  border-left: 1px solid rgb(255, 0, 255);
+  padding-left: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.sec-3 strong {
+  font-weight: 500;
+  color: rgb(255, 0, 255);
+}
+.sec-3 #wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.sec-3 #svg {
+  transform: rotateZ(180deg);
+}
+.sec-3 #svg-div {
+  margin-top: -30vh;
+  margin-left: -20%;
+  height: 25vh;
+  width: 110vw;
+  z-index: -10;
+}
+
+.sec-4 {
+  margin-top: 10%;
+  padding: 0;
+  z-index: 5;
+  position: relative;
+}
+.sec-4 .design-pink {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 0, 255, 0.4);
+}
+.sec-4 .design-green {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(17, 255, 153, 0.8);
+}
+.sec-4 .clip {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  z-index: 5;
+}
+.sec-4 .clip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #030349;
+  -webkit-clip-path: polygon(0 0, 100% 59%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 59%, 100% 100%, 0 100%);
+}
+.sec-4 .follow-clip {
+  transform: translateY(-1px);
+  background-color: #030349;
+  color: #1f9;
+  padding-left: 13%;
+  padding-right: 6%;
+  padding-bottom: 30%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  z-index: 25;
+}
+.sec-4 .follow-clip h2 {
+  margin-bottom: 1em;
+}
+.sec-4 .follow-clip h3 {
+  font-size: 2em;
+  color: rgb(255, 0, 255);
+}
+.sec-4 .follow-clip h4 {
+  color: #fff;
+  font-weight: 600;
+  border-left: 1px solid #d1d;
+  padding-left: 0.5em;
+  margin-top: 2.5em;
+  margin-bottom: 0.25em;
+}
+.sec-4 .follow-clip p {
+  font-size: 0.75em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.sec-4 .follow-clip strong {
+  color: #1f9;
+}
+
+.sec-5 {
+  position: relative;
+}
+.sec-5 h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  margin-top: 25%;
+}
+.sec-5 h2:first-letter {
+  color: rgba(149, 183, 237, 0.6);
+  font-weight: bold;
+  font-size: 3em;
+}
+.sec-5 h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
+  margin-left: 5%;
+  border-bottom: 1px solid black;
+  width: -moz-max-content;
+  width: max-content;
+}
+.sec-5 .blog-container {
+  margin-bottom: 25%;
+}
+.sec-5 .bubble {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+.sec-5 .bubble:nth-child(1) {
+  top: -25px;
+  right: -75px;
+}
+.sec-5 .bubble:nth-child(2) {
+  bottom: 10px;
+  right: 10px;
+}
+.sec-5 .bubble:nth-child(3) {
+  bottom: 31%;
+  left: 15%;
+}
+.sec-5 .bubble:nth-child(4) {
+  top: 15%;
+  left: -10%;
+}
+.sec-5 .bubble:nth-child(5) {
+  top: 45%;
+  right: 5%;
+}
+.sec-5 .bubble:nth-child(6) {
+  top: 75%;
+  right: 40%;
+}
+.sec-5 .pink {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+.sec-5 .blue {
+  background-color: rgba(149, 183, 237, 0.6);
+}
+.sec-5 .green {
+  background-color: rgba(17, 255, 153, 0.8);
+}
+.sec-5 .small {
+  width: 75px;
+  height: 75px;
+  box-shadow: -2px 2px 7px 0 #aaa;
+}
+.sec-5 .med {
+  width: 150px;
+  height: 150px;
+}
+.sec-5 .large {
+  width: 300px;
+  height: 300px;
+}
+
+.post {
+  margin: auto;
+  padding: 1em;
+  position: relative;
+  width: 90%;
+  height: 50vh;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0.5em 1em 0 #aaa;
+}
+.post .image-container {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  max-height: 105px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0.1em 0.25em 0 #000;
+}
+.post .image-container .post-img {
+  all: unset;
+  max-height: 105px;
+  min-width: 100%;
+}
+.post h2 {
+  margin-bottom: 0;
+  margin-top: 100px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+.post h2:first-letter {
+  all: unset;
+  font-size: 1.25em;
+  color: rgba(149, 183, 237, 0.6);
+}
+.post .post-desc {
+  margin: 0.5em 0.5em 0 0;
+}
+.post .comments {
+  position: absolute;
+  bottom: 17%;
+  left: 6%;
+  font-size: 0.75em;
+}
+.post .likes {
+  position: absolute;
+  bottom: 17%;
+  right: 6%;
+  font-size: 0.75em;
+}
+.post .like-btn {
+  position: absolute;
+  bottom: 12%;
+  right: 4%;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.post .comment-btn {
+  position: absolute;
+  bottom: 12%;
+  left: 4%;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.post .view-post-container {
+  overflow: hidden;
+  min-height: 10%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #030349;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em 1em 10px 10px;
+  transition: 250ms ease-in-out;
+}
+.post .view-post-container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 600;
+  position: absolute;
+  padding: 5em;
+  color: #fff;
+}
+
+.slider-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+.slider-dots-container .slider-dots {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #030349;
+}
+
+.blog-options-container {
+  margin-top: 25%;
+}
+.blog-options-container h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  margin-left: 0;
+}
+.blog-options-container h4 {
+  font-size: 1.25em;
+  border-left: 1px solid #f0f;
+  padding-left: 5px;
+  margin-bottom: 0.5em;
+}
+.blog-options-container p {
+  font-size: 0.9em;
+}
+.blog-options-container .blog-options-btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin: 1em 0;
+  margin-bottom: 15%;
+}
+.blog-options-container .blog-options-btn-container button {
+  border: none;
+  outline: none;
+  background-color: #030349;
+  border-radius: 10px;
+  padding: 1.5em 1em;
+  max-width: 100%;
+  box-shadow: 0 0.1em 0.25em 0 #eee;
+  position: relative;
+  color: #fff;
+}
+
+.view-all {
+  margin-bottom: 50%;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  border-radius: 10px;
+  background-color: #030349;
+  color: #fff;
+  outline: none;
+  border: none;
+  box-shadow: 0 0.1em 0.25em 0 #eee;
+}
+
+.sec-6 h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.sec-6 h2:first-letter {
+  color: rgba(149, 183, 237, 0.6);
+  font-weight: bold;
+  font-size: 3em;
+}/*# sourceMappingURL=home.css.map */

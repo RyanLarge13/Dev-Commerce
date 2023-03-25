@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$shadow: 0 0.2em 0.5em #bbb;
+$sizeOne: 1em;
+$size2: 0.5em;
+
+h1 {
+    margin: 2em 0;
+    text-align: center;
+}
+
+form {
+    margin: 0 1em;
+    padding: $sizeOne;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: $sizeOne;
+    background-image: linear-gradient(45deg, rgb(149, 183, 237), rgb(255, 0, 255));
+
+    label {
+        display: none;
+    }
+
+    input {
+        margin: $sizeOne 0;
+        padding: 0.5em $sizeOne;
+        box-shadow: $shadow;
+        outline: none;
+        border: none;
+        border-radius: $size2;
+    }
+
+    button {
+        margin: $sizeOne;
+        background-color: #fff;
+        padding: $size2 $sizeOne;
+        outline: none;
+        border: none;
+        border-radius: $size2;
+        box-shadow: $shadow;
+        font-weight: 600;
+    }
+}
+
+svg {
+    position: fixed;
+    left: 0;
+    z-index: -1;
+}

@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 2em 0;
+  text-align: center;
+}
+
+form {
+  margin: 0 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  background-image: linear-gradient(45deg, rgb(149, 183, 237), rgb(255, 0, 255));
+}
+form label {
+  display: none;
+}
+form input {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  box-shadow: 0 0.2em 0.5em #bbb;
+  outline: none;
+  border: none;
+  border-radius: 0.5em;
+}
+form button {
+  margin: 1em;
+  background-color: #fff;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em 0.5em #bbb;
+  font-weight: 600;
+}
+
+svg {
+  position: fixed;
+  left: 0;
+  z-index: -1;
+}/*# sourceMappingURL=login.css.map */
