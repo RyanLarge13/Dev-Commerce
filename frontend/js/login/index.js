@@ -17,7 +17,6 @@ const login = async (e) => {
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("user", JSON.stringify(data));
-      window.location = `/profile/${data.user}`;
     })
     .catch((err) => console.log(err));
 };
