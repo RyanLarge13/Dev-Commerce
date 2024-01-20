@@ -1,59 +1,67 @@
 body {
-    background-image: url("../../assets/loginBG.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-$shadow: 0 0.2em 0.5em #bbb;
+$shadow: 0 0.2em 0.5em #ddd;
 $shadow-dark: 0 0.5em 0.5em #444;
 $sizeOne: 1em;
 $size2: 0.5em;
 
 h1 {
-    margin: 2em 0;
-    text-align: center;
+  margin: 0.1em 0;
 }
 
 form {
-    transform: translateY(-500px);
-    transition: transform ease-in-out 500ms;
-    margin: 0 1em;
-    padding: $sizeOne;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: $sizeOne;
-    box-shadow: $shadow-dark;
-    background-image: linear-gradient(45deg, rgb(149, 183, 237), rgb(255, 0, 255));
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform ease-in-out 500ms;
+  padding: 1em;
+  background-color: #fff;
 
-    label {
-        display: none;
-    }
+  label {
+    display: none;
+  }
 
-    input {
-        margin: $sizeOne 0;
-        padding: 0.5em $sizeOne;
-        box-shadow: $shadow;
-        outline: none;
-        border: none;
-        border-radius: $size2;
-    }
+  input {
+    margin: 0.5em 0;
+    padding: 1em 0;
+    outline: none;
+    border: none;
+    border-radius: $size2;
+    width: 100%;
+  }
 
-    button {
-        margin: $sizeOne;
-        background-color: #fff;
-        padding: $size2 $sizeOne;
-        outline: none;
-        border: none;
-        border-radius: $size2;
-        box-shadow: $shadow;
-        font-weight: 600;
-    }
+  button {
+    display: block;
+    margin: 1em 0;
+    background-color: #1f9;
+    padding: 1em $sizeOne;
+    outline: none;
+    border: none;
+    border-radius: $size2;
+    box-shadow: $shadow;
+    font-weight: 600;
+    width: 100%;
+  }
+}
+button {
+  display: block;
+  margin: 1em;
+  background-color: #f09;
+  padding: 1em $sizeOne;
+  outline: none;
+  border: none;
+  border-radius: $size2;
+  box-shadow: $shadow;
+  font-weight: 600;
+  width: 100%;
 }

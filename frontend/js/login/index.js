@@ -21,6 +21,6 @@ const login = async (e) => {
     .catch((err) => console.log(err));
 };
 
-document.getElementById("username").value = email;
+document.getElementById("email").value = email;
 
 document.querySelector("form").addEventListener("submit", (e) => login(e));
