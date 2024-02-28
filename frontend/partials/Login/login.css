@@ -10,10 +10,12 @@
   padding: 1em;
   transition: 500ms ease-in-out;
 }
+
 .login-container .login-form-container h2 {
   border-bottom: 1px solid black;
   padding: 5px;
 }
+
 .login-container .login-form-container button {
   padding: 1em 0;
   border: none;
@@ -23,6 +25,7 @@
   box-shadow: 0 0.1em 0.25em 0 #aaa;
   color: #fff;
 }
+
 .login-container .login-form-container form {
   display: flex;
   flex-direction: column;
@@ -30,6 +33,7 @@
   margin: auto;
   margin-top: 33%;
 }
+
 .login-container .login-form-container form input {
   margin-bottom: 1em;
   padding: 15px;
@@ -38,22 +42,27 @@
   box-shadow: 0 0.1em 0.25em 0 #aaa;
   border-radius: 5px;
 }
+
 .login-container .login-form-container form input:focus {
   outline: none;
   border: none;
 }
+
 .login-container .login-form-container form .login-email-btn {
-  background-image: linear-gradient(45deg, rgb(149, 183, 237), rgb(255, 0, 255));
+  background-image: linear-gradient(45deg, #95b7ed, magenta);
   font-weight: 600;
 }
+
 .login-container .login-form-container form .login-email-btn i {
   font-size: 1.25em;
 }
+
 .login-container .login-form-container p {
   text-align: center;
   margin-top: 50%;
   border-bottom: 1px solid black;
 }
+
 .login-container .login-form-container .signin-with-oauth-container {
   display: flex;
   flex-direction: column;
@@ -61,21 +70,27 @@
   margin: auto;
   margin-top: 10%;
 }
+
 .login-container .login-form-container .signin-with-oauth-container button {
   margin: 10px 0;
 }
+
 .login-container .login-form-container .signin-with-oauth-container button i {
   font-size: 1.25em;
 }
+
 .login-container .login-form-container .signin-with-oauth-container .google {
   background-image: linear-gradient(45deg, #4285f4 33%, #ea4335 33% 66%, #fbbc05 33%);
 }
+
 .login-container .login-form-container .signin-with-oauth-container .github {
   background-image: linear-gradient(45deg, #0d1117 50%, #21262d 50%);
 }
+
 .login-container .login-form-container .signin-with-oauth-container .facebook {
   background-image: linear-gradient(45deg, #29487d 50%, #3c5898 50%);
 }
+
 .login-container a {
   position: absolute;
   bottom: 10px;
@@ -86,4 +101,23 @@
 
 .login-container.show {
   top: 10%;
-}/*# sourceMappingURL=login.css.map */
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(20px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
