@@ -1,14 +1,14 @@
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
 }
 
 $shadow: 0 0.2em 0.5em #ddd;
@@ -17,46 +17,33 @@ $sizeOne: 1em;
 $size2: 0.5em;
 
 h1 {
-  margin: 0.1em 0;
+ margin: 0.1em 0;
 }
 
 form {
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform ease-in-out 500ms;
-  padding: 1em;
-  background-color: #fff;
+ transform: translateY(-50px);
+ opacity: 0;
+ transition: transform ease-in-out 500ms;
+ padding: 1em;
+ background-color: #fff;
 
-  label {
-    display: none;
-  }
+ label {
+  display: none;
+ }
 
-  input {
-    margin: 0.5em 0;
-    padding: 1em 0;
-    outline: none;
-    border: none;
-    border-radius: $size2;
-    width: 100%;
-  }
+ input {
+  margin: 0.5em 0;
+  padding: 1em 0;
+  outline: none;
+  border: none;
+  border-radius: $size2;
+  width: 100%;
+ }
 
-  button {
-    display: block;
-    margin: 1em 0;
-    background-color: #1f9;
-    padding: 1em $sizeOne;
-    outline: none;
-    border: none;
-    border-radius: $size2;
-    box-shadow: $shadow;
-    font-weight: 600;
-    width: 100%;
-  }
-}
-button {
+ button {
   display: block;
-  margin: 1em;
-  background-color: #f09;
+  margin: 1em 0;
+  background-color: #1f9;
   padding: 1em $sizeOne;
   outline: none;
   border: none;
@@ -64,4 +51,17 @@ button {
   box-shadow: $shadow;
   font-weight: 600;
   width: 100%;
+ }
+}
+button {
+ display: block;
+ margin: 0 1em;
+ background-color: #f59;
+ padding: 1em $sizeOne;
+ outline: none;
+ border: none;
+ border-radius: $size2;
+ box-shadow: $shadow;
+ font-weight: 600;
+ width: 90%;
 }

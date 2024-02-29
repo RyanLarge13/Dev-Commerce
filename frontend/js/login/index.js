@@ -1,8 +1,8 @@
 const email = localStorage.getItem("email") || null;
 
 const login = async (e) => {
-  const password = document.getElementById("password").value;
   e.preventDefault();
+  const password = document.getElementById("password").value;
   const data = {
     username: email,
     password: password,
@@ -17,6 +17,7 @@ const login = async (e) => {
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("user", JSON.stringify(data));
+      window.location = "/"
     })
     .catch((err) => console.log(err));
 };

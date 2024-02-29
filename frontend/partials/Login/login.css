@@ -8,7 +8,7 @@
   background-color: #fff;
   z-index: 998;
   padding: 1em;
-  transition: 500ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
 .login-container .login-form-container h2 {
@@ -101,7 +101,7 @@
 
 .login-container.show {
   top: 10%;
-  animation: bounce 1s ease-in-out;
+  animation: bounce 500ms ease-in-out;
 }
 
 @keyframes bounce {
@@ -109,7 +109,7 @@
     transform: translateY(0);
   }
   25% {
-    transform: translateY(20px) rotate(5deg);
+    transform: translateY(20px);
   }
   50% {
     transform: translateY(-20px) rotate(-5deg);
