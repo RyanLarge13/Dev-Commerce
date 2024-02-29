@@ -9,7 +9,7 @@ import { loginRouter } from "./routes/loginSignupRouter/loginRouter.js";
 dotenv.config();
 connectDB();
 
-const PORT = process.env.ENV === "dev" ? 8080 : null;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 //Middleware
