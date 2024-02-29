@@ -9,6 +9,7 @@ import { loginRouter } from "./routes/loginSignupRouter/loginRouter.js";
 dotenv.config();
 connectDB();
 
+const PORT = process.env.ENV === "dev" ? 8080 : null;
 const app = express();
 
 //Middleware
@@ -18,8 +19,8 @@ app.use(express.static("../frontend"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRouter);
-app.use("/login", loginRouter)
+app.use("/login", loginRouter);
 
-app.listen(8080, () =>
+app.listen(PORT, "0.0.0.0", () =>
  console.log("Your app is listening on port 8080 : http://localhost:8080")
 );
