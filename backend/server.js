@@ -22,5 +22,5 @@ app.use("/", indexRouter);
 app.use("/login", loginRouter);
 
 app.listen(PORT, "0.0.0.0", () =>
- console.log("Your app is listening on port 8080 : http://localhost:8080")
+ console.log(`Your app is listening on port ${PORT}`)
 );
